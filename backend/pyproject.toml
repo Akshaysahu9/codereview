@@ -1,0 +1,24 @@
+[project]
+name = "codereview-ai-backend"
+version = "1.0.0"
+
+[tool.ruff.lint]
+select = [
+    "E", "F", "W",      # pycodestyle, pyflakes, warnings
+    "B",                # bugbear (real bugs)
+    "PERF",             # performance anti-patterns
+    "RET",              # return issues
+    "RUF",              # ruff-specific
+    "S",                # security (bandit)
+    "SIM",              # simplify
+    "UP",               # pyupgrade
+    "C4",               # comprehensions
+    "PIE",              # misc lints
+]
+ignore = [
+    "E501",   # line length (noise for snippets)
+    "S101",   # assert used (ok in tests)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*" = ["T201"]  # print ok in snippets

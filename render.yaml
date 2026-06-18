@@ -1,0 +1,15 @@
+# Render.com — backend deploy config
+# Dashboard: New > Blueprint > connect repo, or use these settings manually
+
+services:
+  - type: web
+    name: codereview-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && cd tools/eslint-runner && npm install
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: FRONTEND_URL
+        sync: false
