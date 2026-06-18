@@ -17,6 +17,8 @@ Multi-language static code review tool — Python, JavaScript, TypeScript, Java,
 - Export report as Markdown
 - Jump-to-line in editor
 
+live link:- https://codereview-nu-navy.vercel.app/
+
 ## Local setup
 
 ```powershell
