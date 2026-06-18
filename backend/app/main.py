@@ -13,8 +13,8 @@ _default_origins = [
     "http://127.0.0.1:5173",
     "http://localhost:3000",
 ]
-_extra = os.getenv("FRONTEND_URL", "")
-_origins = _default_origins + ([_extra.strip()] if _extra.strip() else [])
+_extra = os.getenv("FRONTEND_URL", "").strip().rstrip("/")
+_origins = _default_origins + ([_extra] if _extra else [])
 
 
 @asynccontextmanager
@@ -40,6 +40,11 @@ app.add_middleware(
 
 app.include_router(review.router)
 app.include_router(history.router)
+
+
+@app.get("/")
+def root():
+    return {"status": "ok", "service": "CodeReview"}
 
 
 @app.get("/api/health")

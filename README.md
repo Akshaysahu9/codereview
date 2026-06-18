@@ -106,10 +106,11 @@ Vercel sirf frontend chala sakta hai; backend alag deploy karna padega.
 4. Settings:
    - **Root Directory:** `backend`
    - **Runtime:** Python 3
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - **Build Command:** `pip install -r requirements.txt && cd tools/eslint-runner && npm install`
+   - **Start Command:** `python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 5. **Environment Variables:**
-   - `FRONTEND_URL` = `https://your-app.vercel.app` (Vercel deploy ke baad daaloge)
+   - `FRONTEND_URL` = `https://your-app.vercel.app` (no trailing slash)
+   - Do **not** link a Render Postgres database — the app uses SQLite. If `DATABASE_URL` is set to Postgres, delete it.
 6. **Create Web Service**
 7. Copy URL — e.g. `https://codereview-api.onrender.com`
 
