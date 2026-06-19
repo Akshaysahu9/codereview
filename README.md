@@ -1,161 +1,306 @@
-# CodeReview
+#  CodeReview AI – Intelligent Code Review & Debugging Platform
 
-Multi-language static code review tool — Python, JavaScript, TypeScript, Java, and C++.
+CodeReview AI is a modern AI-powered static code analysis platform designed to help developers write cleaner, faster, and more secure code.
 
-![Python](https://img.shields.io/badge/Python-3.11+-blue)
-![React](https://img.shields.io/badge/React-19-61dafb)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688)
+The platform automatically reviews source code, detects bugs, analyzes complexity, identifies security risks, suggests optimizations, and generates actionable feedback across multiple programming languages.
 
-## Features
+Built with React, FastAPI, TypeScript, Python, and SQLite, CodeReview AI provides a professional developer experience similar to modern code quality and review tools.
 
-- Code review with score (0–100)
-- Bug detection (syntax, logic, security, loops)
-- Complexity metrics
-- Optimization suggestions
-- Explain / Fix / Test scaffolds
-- Review history (SQLite)
-- Export report as Markdown
-- Jump-to-line in editor
+---
 
-live link:- https://codereview-nu-navy.vercel.app/
+## 🌐 Live Demo
 
-## Local setup
+🔗 https://codereview-nu-navy.vercel.app/
 
-```powershell
-# Backend
+---
+
+## ✨ Key Features
+
+### 🔍 Intelligent Code Review
+
+* Automated source code analysis
+* Overall quality score (0–100)
+* Code quality assessment
+* Maintainability insights
+* Best practice recommendations
+
+### 🐞 Bug Detection
+
+* Syntax issue detection
+* Logic error identification
+* Infinite loop detection
+* Runtime risk analysis
+* Common programming mistakes
+
+### 🔐 Security Analysis
+
+* Security vulnerability detection
+* Unsafe coding pattern identification
+* Input validation recommendations
+* Risk assessment reporting
+
+### ⚡ Complexity Analysis
+
+* Time complexity estimation
+* Code structure evaluation
+* Performance bottleneck detection
+* Readability assessment
+
+### 💡 Optimization Suggestions
+
+* Performance improvements
+* Cleaner code recommendations
+* Refactoring opportunities
+* Better implementation suggestions
+
+### 🤖 AI Assistance
+
+* Explain Code
+* Generate Fixed Code
+* Create Test Scaffolds
+* Improvement Recommendations
+
+### 📚 Review History
+
+* Persistent review storage
+* Previous review access
+* SQLite database integration
+* Analysis tracking
+
+### 📄 Export Reports
+
+* Markdown report generation
+* Downloadable review summaries
+* Shareable feedback reports
+
+### 🎯 Developer Experience
+
+* Multi-language support
+* Jump-to-line navigation
+* Interactive code editor
+* Responsive UI
+
+---
+
+## 🌍 Supported Languages
+
+* Python
+* JavaScript
+* TypeScript
+* Java
+* C++
+
+---
+
+## 🎯 Project Highlights
+
+* AI-Powered Code Review Platform
+* Static Code Analysis Engine
+* Multi-Language Support
+* Bug & Security Detection
+* Complexity Evaluation
+* Automated Optimization Suggestions
+* Report Generation System
+* Full Stack Application
+* Production Deployment
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React 19
+* TypeScript
+* Vite
+
+### Backend
+
+* FastAPI
+* Python 3.11+
+
+### Database
+
+* SQLite
+
+### Analysis Engine
+
+* Custom Static Analysis
+* Language-Specific Review Engines
+
+### Deployment
+
+* Vercel (Frontend)
+* Render (Backend)
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Developer
+     │
+     ▼
+ React Frontend
+     │
+     ▼
+ FastAPI Backend
+     │
+ ┌──────────────┬──────────────┬──────────────┐
+ ▼              ▼              ▼              ▼
+Code        Security      Complexity     Optimization
+Analysis     Review        Analysis       Engine
+     │
+     ▼
+ SQLite Database
+     │
+     ▼
+ Review History
+```
+
+---
+
+## 📷 Screenshots
+
+### Dashboard
+
+### Code Review Interface
+
+### Analysis Results
+
+### Complexity Report
+
+### Review History
+
+---
+
+## 🚀 Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Akshaysahu9/codereview.git
+```
+
+### Backend Setup
+
+```bash
 cd backend
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-scripts\install-engines.bat
-uvicorn app.main:app --reload --port 8000
 
-# Frontend (new terminal)
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+scripts\install-engines.bat
+
+uvicorn app.main:app --reload --port 8000
+```
+
+### Frontend Setup
+
+```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
-Open http://localhost:5173
+Open:
+
+```text
+http://localhost:5173
+```
 
 ---
 
-## GitHub upload (step by step)
+## 📡 Deployment
 
-### 1. Git identity — sirf tumhara naam
+### Frontend
 
-Contributor mein **sirf wahi dikhega jo tum commit karte ho**. Pehle yeh set karo:
+* Vercel
 
-```powershell
-git config --global user.name "Your Full Name"
-git config --global user.email "your-email@gmail.com"
+### Backend
+
+* Render
+
+Environment Variables:
+
+```env
+VITE_API_URL=https://your-render-backend-url.onrender.com
+FRONTEND_URL=https://your-vercel-app.vercel.app
 ```
-
-> GitHub par sirf wahi naam dikhega jo `git config user.name` mein set ho. Apna personal email use karo.
-
-### 2. GitHub par naya repo
-
-1. https://github.com/new
-2. Repository name: `codereview` (ya jo chaho)
-3. **Public** select karo
-4. README / .gitignore **mat** add karo (project pehle se hai)
-5. **Create repository**
-
-### 3. Project push karo
-
-```powershell
-cd path/to/codereview
-
-git init
-git add .
-git status
-```
-
-Check karo `.env`, `venv`, `node_modules` staged **nahi** hone chahiye.
-
-```powershell
-git commit -m "Initial commit: CodeReview static analysis platform"
-
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/codereview.git
-git push -u origin main
-```
-
-Replace `YOUR_USERNAME` apne GitHub username se.
-
-### 4. Verify contributors
-
-Repo → **Insights** → **Contributors** — sirf **tumhara** naam hona chahiye.
 
 ---
 
-## Live deploy
+## 📂 Project Structure
 
-Project do parts mein hai:
-
-| Part | Host | Why |
-|------|------|-----|
-| Frontend (React) | **Vercel** | Static site, free |
-| Backend (FastAPI) | **Render** | Python server, free tier |
-
-Vercel sirf frontend chala sakta hai; backend alag deploy karna padega.
-
-### Step A — Backend on Render
-
-1. https://render.com — sign up (GitHub se login)
-2. **New +** → **Web Service**
-3. Connect apna GitHub repo
-4. Settings:
-   - **Root Directory:** `backend`
-   - **Runtime:** Python 3
-   - **Build Command:** `pip install -r requirements.txt && cd tools/eslint-runner && npm install`
-   - **Start Command:** `python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-5. **Environment Variables:**
-   - `FRONTEND_URL` = `https://your-app.vercel.app` (no trailing slash)
-   - Do **not** link a Render Postgres database — the app uses SQLite. If `DATABASE_URL` is set to Postgres, delete it.
-6. **Create Web Service**
-7. Copy URL — e.g. `https://codereview-api.onrender.com`
-
-Health check: `https://YOUR-RENDER-URL.onrender.com/api/health`
-
-### Step B — Frontend on Vercel
-
-1. https://vercel.com — sign up (GitHub se)
-2. **Add New** → **Project**
-3. Import same GitHub repo
-4. Settings:
-   - **Root Directory:** `frontend`
-   - **Framework Preset:** Vite
-   - **Build Command:** `npm run build`
-   - **Output Directory:** `dist`
-5. **Environment Variables:**
-   - `VITE_API_URL` = `https://codereview-api.onrender.com` (Render URL, no trailing slash)
-6. **Deploy**
-
-Live site: `https://your-project.vercel.app`
-
-### Step C — CORS fix
-
-Render dashboard → backend service → **Environment** → update:
-
-```
-FRONTEND_URL=https://your-project.vercel.app
-```
-
-Save → service redeploy hoga.
-
----
-
-## Project structure
-
-```
+```text
 codereview/
-├── backend/          FastAPI + analyzers
-├── frontend/         React + Vite
-├── render.yaml       Render config (optional)
+├── backend/
+│   ├── app/
+│   ├── analyzers/
+│   ├── services/
+│   └── database/
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── hooks/
+│
+├── render.yaml
 └── README.md
 ```
 
-## License
+---
 
-MIT
+## 🎓 Learning Outcomes
+
+* Static Code Analysis
+* Full Stack Development
+* FastAPI Development
+* REST API Design
+* Database Integration
+* Software Quality Engineering
+* Security Analysis
+* Performance Optimization
+
+---
+
+## 🔮 Future Enhancements
+
+* AI-Powered Code Explanations
+* GitHub Repository Analysis
+* Pull Request Reviews
+* Code Smell Detection
+* Team Collaboration Dashboard
+* CI/CD Integration
+* AI Refactoring Suggestions
+* Cloud Database Support
+
+---
+
+## 👨‍💻 Author
+
+**Akshay Sahu**
+
+B.Tech Computer Science Engineering
+
+📧 [Akshayguptasahu@gmail.com](mailto:Akshayguptasahu@gmail.com)
+
+💼 LinkedIn: https://linkedin.com/in/akshay-gupta-97b6323a7
+
+🐙 GitHub: https://github.com/Akshaysahu9
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
+
+### Built with ❤️ using React, FastAPI, Python, TypeScript, and Modern Software Engineering Practices.
